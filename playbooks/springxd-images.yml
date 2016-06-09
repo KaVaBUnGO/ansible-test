@@ -1,0 +1,10 @@
+---
+- hosts: test
+  become: yes
+  become_method: sudo
+
+  tasks:
+  - name: pull images
+#    docker_image:
+#      name: kavabungo/docker-springxd-base      
+    command: docker pull kavabungo/docker-springxd-base

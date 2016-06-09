@@ -1,0 +1,1502 @@
+2016-06-02 08:18:01,964 p=1730 u=ec2-user |  127.0.0.1 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh.", 
+    "unreachable": true
+}
+2016-06-02 08:21:14,191 p=1769 u=ec2-user |  127.0.0.1 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2016-06-02 08:32:27,299 p=1854 u=ec2-user |  ERROR! Missing target hosts
+2016-06-02 08:32:47,642 p=1860 u=ec2-user |  127.0.0.1 | SUCCESS | rc=0 >>
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      5,8G  2,0G  3,6G  36% /
+tmpfs           1,9G   32K  1,9G   1% /dev/shm
+
+2016-06-02 08:33:25,746 p=1923 u=ec2-user |  127.0.0.1 | SUCCESS | rc=0 >>
+             total       used       free     shared    buffers     cached
+Mem:          3829        623       3206          0         17        414
+-/+ buffers/cache:        191       3637 
+Swap:            0          0          0 
+Total:        3829        623       3206 
+
+2016-06-02 08:35:56,051 p=2001 u=ec2-user |  127.0.0.1 | SUCCESS | rc=0 >>
+ 08:35:56 up 30 min,  2 users,  load average: 0.04, 0.02, 0.00
+
+2016-06-02 08:36:53,256 p=2066 u=ec2-user |  127.0.0.1 | SUCCESS | rc=0 >>
+x86_64
+
+2016-06-02 08:37:02,104 p=2122 u=ec2-user |  127.0.0.1 | SUCCESS | rc=0 >>
+ip-172-31-29-92.eu-west-1.compute.internal
+
+2016-06-02 10:03:40,591 p=24509 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker.yml': line 9, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Install Pypi
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker.yml': line 9, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Install Pypi
+    ^ here
+
+2016-06-02 10:06:28,716 p=24520 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:06:28,753 p=24520 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:06:29,543 p=24520 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:06:29,546 p=24520 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:06:30,073 p=24520 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:06:30,075 p=24520 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:06:30,565 p=24520 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:06:30,567 p=24520 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:06:30,859 p=24520 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Failed to find required executable pip"}
+2016-06-02 10:06:30,859 p=24520 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:06:30,860 p=24520 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:06:30,860 p=24520 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:06:30,860 p=24520 u=ec2-user |  127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1   
+2016-06-02 10:07:10,944 p=24866 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:07:10,981 p=24866 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:07:11,449 p=24866 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:07:11,451 p=24866 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:07:11,972 p=24866 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:07:11,974 p=24866 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:07:12,350 p=24866 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:07:12,352 p=24866 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:07:12,644 p=24866 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Failed to find required executable pip"}
+2016-06-02 10:07:12,645 p=24866 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:07:12,645 p=24866 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:07:12,645 p=24866 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:07:12,645 p=24866 u=ec2-user |  127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1   
+2016-06-02 10:08:55,150 p=25208 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:08:55,187 p=25208 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:08:55,932 p=25208 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:08:55,934 p=25208 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:08:56,461 p=25208 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:08:56,463 p=25208 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:08:56,839 p=25208 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:08:56,841 p=25208 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:08:57,132 p=25208 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Failed to find required executable pip"}
+2016-06-02 10:08:57,132 p=25208 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:08:57,133 p=25208 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:08:57,133 p=25208 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:08:57,133 p=25208 u=ec2-user |  127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1   
+2016-06-02 10:16:42,746 p=25578 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:16:42,783 p=25578 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:16:43,538 p=25578 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:16:43,541 p=25578 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:16:44,067 p=25578 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:16:44,069 p=25578 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:16:44,446 p=25578 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:16:44,448 p=25578 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:16:44,738 p=25578 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Failed to find required executable pip"}
+2016-06-02 10:16:44,739 p=25578 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:16:44,739 p=25578 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:16:44,739 p=25578 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:16:44,739 p=25578 u=ec2-user |  127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1   
+2016-06-02 10:19:09,470 p=25929 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:19:09,506 p=25929 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:19:10,263 p=25929 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:19:10,266 p=25929 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:19:10,802 p=25929 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:19:10,804 p=25929 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:19:11,180 p=25929 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:19:11,182 p=25929 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:19:11,473 p=25929 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Failed to find required executable pip"}
+2016-06-02 10:19:11,474 p=25929 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:19:11,474 p=25929 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:19:11,474 p=25929 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:19:11,474 p=25929 u=ec2-user |  127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1   
+2016-06-02 10:27:26,625 p=26319 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:27:26,661 p=26319 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:27:27,660 p=26319 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:27:27,663 p=26319 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:27:28,233 p=26319 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:27:28,361 p=26319 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:27:32,074 p=26319 u=ec2-user |  changed: [127.0.0.1]
+2016-06-02 10:27:32,076 p=26319 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:27:34,661 p=26319 u=ec2-user |  changed: [127.0.0.1]
+2016-06-02 10:27:34,663 p=26319 u=ec2-user |  TASK [Install Docker] **********************************************************
+2016-06-02 10:27:39,317 p=26319 u=ec2-user |  changed: [127.0.0.1]
+2016-06-02 10:27:39,319 p=26319 u=ec2-user |  TASK [Make sure Docker is running] *********************************************
+2016-06-02 10:27:39,649 p=26319 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "no service or tool found for: docker"}
+2016-06-02 10:27:39,650 p=26319 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:27:39,650 p=26319 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:27:39,650 p=26319 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:27:39,650 p=26319 u=ec2-user |  127.0.0.1                  : ok=5    changed=3    unreachable=0    failed=1   
+2016-06-02 10:33:00,221 p=27055 u=ec2-user |  ERROR! 'enabled' is not a valid attribute for a Task
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker.yml': line 19, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  -   name: Make sure Docker is running
+      ^ here
+
+2016-06-02 10:33:20,530 p=27061 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:33:20,567 p=27061 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:33:21,577 p=27061 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:33:21,579 p=27061 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:33:22,149 p=27061 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:33:22,152 p=27061 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:33:22,906 p=27061 u=ec2-user |  changed: [127.0.0.1]
+2016-06-02 10:33:22,908 p=27061 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:33:23,621 p=27061 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:33:23,623 p=27061 u=ec2-user |  TASK [Install Docker] **********************************************************
+2016-06-02 10:33:25,634 p=27061 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:33:25,636 p=27061 u=ec2-user |  TASK [Make sure Docker is running] *********************************************
+2016-06-02 10:33:25,948 p=27061 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "no service or tool found for: docker"}
+2016-06-02 10:33:25,949 p=27061 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:33:25,950 p=27061 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:33:25,950 p=27061 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:33:25,950 p=27061 u=ec2-user |  127.0.0.1                  : ok=5    changed=1    unreachable=0    failed=1   
+2016-06-02 10:41:16,594 p=27540 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:41:16,630 p=27540 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:41:17,388 p=27540 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:41:17,391 p=27540 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:41:17,924 p=27540 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:41:17,926 p=27540 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:41:18,303 p=27540 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:41:18,305 p=27540 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:41:19,126 p=27540 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:41:19,128 p=27540 u=ec2-user |  TASK [Install Docker] **********************************************************
+2016-06-02 10:41:19,975 p=27540 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Repo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/product/rhui-client-config-server-6.crt\nRepo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/rhui-client-config-server-6.key\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/product/content-rhel6.crt\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/content-rhel6.key\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/product/content-rhel6.crt\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/content-rhel6.key\n\n\nCould not contact any CDS load balancers: rhui2-cds01.eu-west-1.aws.ce.redhat.com, rhui2-cds02.eu-west-1.aws.ce.redhat.com.\n", "rc": 1, "results": []}
+2016-06-02 10:41:19,976 p=27540 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:41:19,976 p=27540 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:41:19,976 p=27540 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:41:19,977 p=27540 u=ec2-user |  127.0.0.1                  : ok=4    changed=0    unreachable=0    failed=1   
+2016-06-02 10:43:12,441 p=27945 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:43:12,478 p=27945 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:43:13,222 p=27945 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:43:13,225 p=27945 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:43:13,758 p=27945 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:43:13,849 p=27945 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:43:14,228 p=27945 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:43:14,230 p=27945 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:43:14,944 p=27945 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:43:14,946 p=27945 u=ec2-user |  TASK [Install Docker] **********************************************************
+2016-06-02 10:43:15,750 p=27945 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Repo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/product/rhui-client-config-server-6.crt\nRepo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/rhui-client-config-server-6.key\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/product/content-rhel6.crt\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/content-rhel6.key\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/product/content-rhel6.crt\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/content-rhel6.key\n\n\nCould not contact any CDS load balancers: rhui2-cds01.eu-west-1.aws.ce.redhat.com, rhui2-cds02.eu-west-1.aws.ce.redhat.com.\n", "rc": 1, "results": []}
+2016-06-02 10:43:15,750 p=27945 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:43:15,751 p=27945 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:43:15,751 p=27945 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:43:15,751 p=27945 u=ec2-user |  127.0.0.1                  : ok=4    changed=0    unreachable=0    failed=1   
+2016-06-02 10:50:02,275 p=8297 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:50:02,313 p=8297 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:50:03,137 p=8297 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:50:03,144 p=8297 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:50:03,718 p=8297 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:50:03,720 p=8297 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:50:04,104 p=8297 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:50:04,106 p=8297 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:50:04,837 p=8297 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:50:04,840 p=8297 u=ec2-user |  TASK [Install Docker] **********************************************************
+2016-06-02 10:50:05,889 p=8297 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Repo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/product/rhui-client-config-server-6.crt\nRepo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/rhui-client-config-server-6.key\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/product/content-rhel6.crt\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/content-rhel6.key\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/product/content-rhel6.crt\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/content-rhel6.key\n\n\nCould not contact any CDS load balancers: rhui2-cds01.eu-west-1.aws.ce.redhat.com, rhui2-cds02.eu-west-1.aws.ce.redhat.com.\n", "rc": 1, "results": []}
+2016-06-02 10:50:05,890 p=8297 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:50:05,890 p=8297 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:50:05,890 p=8297 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:50:05,890 p=8297 u=ec2-user |  127.0.0.1                  : ok=4    changed=0    unreachable=0    failed=1   
+2016-06-02 10:50:22,450 p=8701 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:50:22,487 p=8701 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:50:22,974 p=8701 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:50:22,976 p=8701 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:50:23,535 p=8701 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:50:23,537 p=8701 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:50:23,981 p=8701 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:50:23,983 p=8701 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:50:24,707 p=8701 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:50:24,709 p=8701 u=ec2-user |  TASK [Install Docker] **********************************************************
+2016-06-02 10:50:25,527 p=8701 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Repo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/product/rhui-client-config-server-6.crt\nRepo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/rhui-client-config-server-6.key\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/product/content-rhel6.crt\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/content-rhel6.key\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/product/content-rhel6.crt\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/content-rhel6.key\n\n\nCould not contact any CDS load balancers: rhui2-cds01.eu-west-1.aws.ce.redhat.com, rhui2-cds02.eu-west-1.aws.ce.redhat.com.\n", "rc": 1, "results": []}
+2016-06-02 10:50:25,528 p=8701 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:50:25,528 p=8701 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:50:25,528 p=8701 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:50:25,528 p=8701 u=ec2-user |  127.0.0.1                  : ok=4    changed=0    unreachable=0    failed=1   
+2016-06-02 10:50:37,730 p=9099 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:50:37,767 p=9099 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:50:38,512 p=9099 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:50:38,515 p=9099 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:50:39,104 p=9099 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:50:39,106 p=9099 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:50:39,864 p=9099 u=ec2-user |  changed: [127.0.0.1]
+2016-06-02 10:50:39,866 p=9099 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:50:40,598 p=9099 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:50:40,600 p=9099 u=ec2-user |  TASK [Install Docker] **********************************************************
+2016-06-02 10:50:42,455 p=9099 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:50:42,457 p=9099 u=ec2-user |  TASK [Make sure Docker is running] *********************************************
+2016-06-02 10:50:42,775 p=9099 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "no service or tool found for: docker"}
+2016-06-02 10:50:42,776 p=9099 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:50:42,777 p=9099 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:50:42,777 p=9099 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:50:42,777 p=9099 u=ec2-user |  127.0.0.1                  : ok=5    changed=1    unreachable=0    failed=1   
+2016-06-02 10:53:05,676 p=9562 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:53:05,713 p=9562 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:53:06,724 p=9562 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:53:06,727 p=9562 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:53:07,341 p=9562 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:53:07,343 p=9562 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:53:08,102 p=9562 u=ec2-user |  changed: [127.0.0.1]
+2016-06-02 10:53:08,104 p=9562 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:53:08,831 p=9562 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:53:08,833 p=9562 u=ec2-user |  TASK [Install Docker] **********************************************************
+2016-06-02 10:53:10,727 p=9562 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:53:10,729 p=9562 u=ec2-user |  TASK [Make sure Docker is running] *********************************************
+2016-06-02 10:53:11,042 p=9562 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "no service or tool found for: docker"}
+2016-06-02 10:53:11,043 p=9562 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:53:11,044 p=9562 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:53:11,044 p=9562 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:53:11,044 p=9562 u=ec2-user |  127.0.0.1                  : ok=5    changed=1    unreachable=0    failed=1   
+2016-06-02 10:55:36,920 p=10025 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:55:36,958 p=10025 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:55:37,944 p=10025 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:55:37,947 p=10025 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:55:38,553 p=10025 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:55:38,555 p=10025 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:55:39,313 p=10025 u=ec2-user |  changed: [127.0.0.1]
+2016-06-02 10:55:39,315 p=10025 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:55:40,042 p=10025 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:55:40,044 p=10025 u=ec2-user |  TASK [Install Docker] **********************************************************
+2016-06-02 10:55:41,972 p=10025 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:55:41,974 p=10025 u=ec2-user |  TASK [Make sure Docker is running] *********************************************
+2016-06-02 10:55:42,288 p=10025 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "no service or tool found for: docker"}
+2016-06-02 10:55:42,289 p=10025 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:55:42,290 p=10025 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:55:42,290 p=10025 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:55:42,290 p=10025 u=ec2-user |  127.0.0.1                  : ok=5    changed=1    unreachable=0    failed=1   
+2016-06-02 10:56:37,898 p=10491 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 10:56:37,998 p=10491 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:56:38,035 p=10491 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:56:38,763 p=10491 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 10:56:38,765 p=10491 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 10:56:39,352 p=10491 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-02 10:56:39,354 p=10491 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 10:56:40,106 p=10491 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-02 10:56:40,108 p=10491 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 10:56:40,830 p=10491 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-02 10:56:40,832 p=10491 u=ec2-user |  TASK [Install Docker] **********************************************************
+2016-06-02 10:56:42,649 p=10491 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["All packages providing docker are up to date", ""]}
+2016-06-02 10:56:42,651 p=10491 u=ec2-user |  TASK [Make sure Docker is running] *********************************************
+2016-06-02 10:56:42,963 p=10491 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "no service or tool found for: docker"}
+2016-06-02 10:56:42,964 p=10491 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:56:42,964 p=10491 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:56:42,964 p=10491 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:56:42,965 p=10491 u=ec2-user |  127.0.0.1                  : ok=5    changed=1    unreachable=0    failed=1   
+2016-06-02 10:58:56,549 p=10947 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 10:58:56,650 p=10947 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 10:58:56,687 p=10947 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 10:59:09,207 p=10947 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"failed": true, "msg": "Timeout (12s) waiting for privilege escalation prompt: "}
+2016-06-02 10:59:09,208 p=10947 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 10:59:09,209 p=10947 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 10:59:09,209 p=10947 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 10:59:09,209 p=10947 u=ec2-user |  127.0.0.1                  : ok=0    changed=0    unreachable=0    failed=1   
+2016-06-02 11:00:37,210 p=11019 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 11:00:37,310 p=11019 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 11:00:37,348 p=11019 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 11:00:38,107 p=11019 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 11:00:38,109 p=11019 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 11:00:38,708 p=11019 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-02 11:00:38,710 p=11019 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 11:00:39,461 p=11019 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-02 11:00:39,463 p=11019 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 11:00:40,189 p=11019 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-02 11:00:40,191 p=11019 u=ec2-user |  TASK [Install Docker] **********************************************************
+2016-06-02 11:00:42,088 p=11019 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["All packages providing docker are up to date", ""]}
+2016-06-02 11:00:42,090 p=11019 u=ec2-user |  TASK [Make sure Docker is running] *********************************************
+2016-06-02 11:00:42,408 p=11019 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "no service or tool found for: docker"}
+2016-06-02 11:00:42,408 p=11019 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 11:00:42,409 p=11019 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 11:00:42,409 p=11019 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 11:00:42,409 p=11019 u=ec2-user |  127.0.0.1                  : ok=5    changed=1    unreachable=0    failed=1   
+2016-06-02 11:40:49,833 p=11631 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 11:40:49,935 p=11631 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 11:40:49,974 p=11631 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 11:40:50,745 p=11631 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 11:40:50,747 p=11631 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 11:40:51,360 p=11631 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-02 11:40:51,362 p=11631 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 11:40:52,113 p=11631 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-02 11:40:52,115 p=11631 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 11:40:52,858 p=11631 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-02 11:40:52,860 p=11631 u=ec2-user |  TASK [Install Docker] **********************************************************
+2016-06-02 11:40:56,778 p=11631 u=ec2-user |  changed: [127.0.0.1] => {"changed": true, "msg": "", "rc": 0, "results": ["Загружены модули: amazon-id, rhui-lb, search-disabled-repos, security\nПодготовка к установке\nРазрешение зависимостей\n--> Проверка сценария\n---> Package docker.x86_64 0:1.5-5.el6 will be для установки\n--> Проверка зависимостей окончена\n\nЗависимости разрешены\n\n================================================================================\n Пакет             Архитектура       Версия               Репозиторий     Размер\n================================================================================\nУстановка:\n docker            x86_64            1.5-5.el6            epel             19 k\n\nРезультат операции\n================================================================================\nУстановить     1 пакет(а,ов)\n\nОбъем загрузки: 19 k\nБудет установлено: 37 k\nЗагрузка пакетов:\nЗапуск rpm_check_debug\nПроверяем сценарий\nПроверка сценария прошла успешно\nЗапускается сценарий\n\r  Установка   : docker-1.5-5.el6.x86_64                                     1/1 \n\r  Verifying   : docker-1.5-5.el6.x86_64                                     1/1 \n\nУстановлено:\n  docker.x86_64 0:1.5-5.el6                                                     \n\nГотово!\n"]}
+2016-06-02 11:40:56,780 p=11631 u=ec2-user |  TASK [Start Docker service] ****************************************************
+2016-06-02 11:40:57,102 p=11631 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "no service or tool found for: docker"}
+2016-06-02 11:40:57,102 p=11631 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 11:40:57,103 p=11631 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 11:40:57,103 p=11631 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 11:40:57,103 p=11631 u=ec2-user |  127.0.0.1                  : ok=5    changed=2    unreachable=0    failed=1   
+2016-06-02 11:42:15,086 p=12098 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 11:42:15,186 p=12098 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 11:42:15,224 p=12098 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 11:42:15,937 p=12098 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 11:42:15,940 p=12098 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 11:42:16,521 p=12098 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-02 11:42:16,523 p=12098 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 11:42:17,276 p=12098 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-02 11:42:17,278 p=12098 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 11:42:18,001 p=12098 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-02 11:42:18,003 p=12098 u=ec2-user |  TASK [Install Docker] **********************************************************
+2016-06-02 11:42:20,083 p=12098 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "No Package matching 'docker-engine' found available, installed or updated", "rc": 0, "results": []}
+2016-06-02 11:42:20,084 p=12098 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 11:42:20,085 p=12098 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 11:42:20,085 p=12098 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 11:42:20,085 p=12098 u=ec2-user |  127.0.0.1                  : ok=4    changed=1    unreachable=0    failed=1   
+2016-06-02 11:51:56,736 p=12540 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 11:51:56,836 p=12540 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 11:51:56,874 p=12540 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 11:51:57,619 p=12540 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 11:51:57,621 p=12540 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 11:51:58,206 p=12540 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-02 11:51:58,208 p=12540 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 11:51:58,976 p=12540 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-02 11:51:58,978 p=12540 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 11:51:59,707 p=12540 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-02 11:51:59,709 p=12540 u=ec2-user |  TASK [Install Docker Engine] ***************************************************
+2016-06-02 11:52:00,782 p=12540 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "No Package matching 'docker-engine' found available, installed or updated", "rc": 0, "results": []}
+2016-06-02 11:52:00,783 p=12540 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 11:52:00,783 p=12540 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 11:52:00,784 p=12540 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 11:52:00,784 p=12540 u=ec2-user |  127.0.0.1                  : ok=4    changed=1    unreachable=0    failed=1   
+2016-06-02 11:54:33,587 p=12958 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 11:54:33,683 p=12958 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 11:54:33,720 p=12958 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 11:54:34,435 p=12958 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 11:54:34,438 p=12958 u=ec2-user |  TASK [Install Docker Repo] *****************************************************
+2016-06-02 11:54:34,461 p=12958 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "IOError: [Errno 2] No such file or directory: u'/home/ec2-user/ansible/playbooks/docker-repo.j2'"}
+2016-06-02 11:54:34,462 p=12958 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 11:54:34,462 p=12958 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker2.retry
+
+2016-06-02 11:54:34,462 p=12958 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 11:54:34,462 p=12958 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-02 11:58:07,206 p=13167 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 11:58:07,206 p=13167 u=ec2-user |  ERROR! the playbook: setup_docker2.yml could not be found
+2016-06-02 11:58:16,354 p=13173 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 11:58:16,451 p=13173 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 11:58:16,489 p=13173 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 11:58:17,205 p=13173 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 11:58:17,208 p=13173 u=ec2-user |  TASK [Install Docker Repo] *****************************************************
+2016-06-02 11:58:17,230 p=13173 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "IOError: [Errno 2] No such file or directory: u'/home/ec2-user/ansible/playbooks/docker-repo.j2'"}
+2016-06-02 11:58:17,231 p=13173 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 11:58:17,231 p=13173 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker2.retry
+
+2016-06-02 11:58:17,232 p=13173 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 11:58:17,232 p=13173 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-02 12:07:19,567 p=13408 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:07:19,579 p=13408 u=ec2-user |  ERROR! 'docker_yum_repo' is not a valid attribute for a Play
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker2.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- hosts: test
+  ^ here
+
+2016-06-02 12:08:29,306 p=13416 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:08:29,355 p=13416 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker2.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Install Docker Repo
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker2.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Install Docker Repo
+    ^ here
+
+2016-06-02 12:08:52,175 p=13440 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:08:52,224 p=13440 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker2.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Install Docker Repo
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker2.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Install Docker Repo
+    ^ here
+
+2016-06-02 12:10:59,319 p=13455 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:10:59,370 p=13455 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker2.yml': line 6, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker2.yml': line 6, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+2016-06-02 12:11:58,447 p=13462 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:11:58,496 p=13462 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker2.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker2.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+2016-06-02 12:15:42,032 p=13474 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:15:42,080 p=13474 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker2.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker2.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+2016-06-02 12:17:09,273 p=13512 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+2016-06-02 12:18:16,875 p=13520 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 7, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+2016-06-02 12:20:00,763 p=13527 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 4, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 4, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+2016-06-02 12:22:40,883 p=13541 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 4, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 4, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+2016-06-02 12:22:56,234 p=13547 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:22:56,282 p=13547 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 4, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 4, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Install Docker Repo
+    ^ here
+
+2016-06-02 12:23:53,618 p=13553 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:23:53,667 p=13553 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 4, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Add repository
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 4, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Add repository
+    ^ here
+
+2016-06-02 12:24:47,898 p=13561 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:24:47,947 p=13561 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 5, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Add repository
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 5, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Add repository
+    ^ here
+
+2016-06-02 12:25:04,031 p=13566 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:25:04,079 p=13566 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 5, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Add repository
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 5, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: Add repository
+    ^ here
+
+2016-06-02 12:25:17,832 p=13572 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:25:17,926 p=13572 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 12:25:17,962 p=13572 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 12:25:18,486 p=13572 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 12:25:18,489 p=13572 u=ec2-user |  TASK [Install Docker Engine] ***************************************************
+2016-06-02 12:25:19,409 p=13572 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Failure talking to yum: Could not contact any CDS load balancers: rhui2-cds01.eu-west-1.aws.ce.redhat.com, rhui2-cds02.eu-west-1.aws.ce.redhat.com."}
+2016-06-02 12:25:19,410 p=13572 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 12:25:19,410 p=13572 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker3.retry
+
+2016-06-02 12:25:19,410 p=13572 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 12:25:19,411 p=13572 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-02 12:26:28,141 p=13820 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:26:28,191 p=13820 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 6, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: add Repo
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 6, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: add Repo
+    ^ here
+
+2016-06-02 12:26:48,078 p=13826 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:26:48,129 p=13826 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 6, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Add Repo
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 6, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Add Repo
+    ^ here
+
+2016-06-02 12:27:11,871 p=13832 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:27:11,881 p=13832 u=ec2-user |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 7, column 21, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  - name: Add Repo
+      yum_repository:
+                    ^ here
+
+2016-06-02 12:27:22,636 p=13837 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 12:27:22,647 p=13837 u=ec2-user |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker3.yml': line 15, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Install Docker Engine
+  ^ here
+
+2016-06-02 14:46:10,057 p=14601 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 14:46:10,154 p=14601 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 14:46:10,191 p=14601 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 14:46:10,703 p=14601 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 14:46:10,706 p=14601 u=ec2-user |  TASK [Install Docker Engine] ***************************************************
+2016-06-02 14:46:11,452 p=14601 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": true, "failed": true, "msg": "Repo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/product/rhui-client-config-server-6.crt\nRepo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/rhui-client-config-server-6.key\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/product/content-rhel6.crt\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/content-rhel6.key\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/product/content-rhel6.crt\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/content-rhel6.key\nYou need to be root to perform this command.\n", "rc": 1, "results": ["Loaded plugins: amazon-id, rhui-lb, search-disabled-repos, security\n"]}
+2016-06-02 14:46:11,453 p=14601 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 14:46:11,453 p=14601 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker3.retry
+
+2016-06-02 14:46:11,454 p=14601 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 14:46:11,454 p=14601 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-02 14:47:16,880 p=14852 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 14:47:16,932 p=14852 u=ec2-user |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-06-02 14:47:16,977 p=14852 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 14:47:17,014 p=14852 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 14:47:17,496 p=14852 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 14:47:17,499 p=14852 u=ec2-user |  TASK [Install Docker Engine] ***************************************************
+2016-06-02 14:47:20,873 p=14852 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": true, "failed": true, "msg": "Error: Package: docker-engine-1.10.0-1.el7.centos.x86_64 (/docker-engine-1.10.0-1.el7.centos.x86_64)\n           Requires: docker-engine-selinux >= 1.10.0-1.el7.centos\nError: Package: docker-engine-1.10.0-1.el7.centos.x86_64 (/docker-engine-1.10.0-1.el7.centos.x86_64)\n           Requires: systemd-units\nError: Package: docker-engine-1.10.0-1.el7.centos.x86_64 (/docker-engine-1.10.0-1.el7.centos.x86_64)\n           Requires: selinux-policy >= 3.13.1-23\n           Installed: selinux-policy-3.7.19-292.el6.noarch (@rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-292.el6\n           Available: selinux-policy-3.7.19-54.el6.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-54.el6\n           Available: selinux-policy-3.7.19-54.el6_0.3.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-54.el6_0.3\n           Available: selinux-policy-3.7.19-54.el6_0.5.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-54.el6_0.5\n           Available: selinux-policy-3.7.19-93.el6.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-93.el6\n           Available: selinux-policy-3.7.19-93.el6_1.2.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-93.el6_1.2\n           Available: selinux-policy-3.7.19-93.el6_1.7.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-93.el6_1.7\n           Available: selinux-policy-3.7.19-126.el6.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-126.el6\n           Available: selinux-policy-3.7.19-126.el6_2.3.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-126.el6_2.3\n           Available: selinux-policy-3.7.19-126.el6_2.4.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-126.el6_2.4\n           Available: selinux-policy-3.7.19-126.el6_2.6.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-126.el6_2.6\n           Available: selinux-policy-3.7.19-126.el6_2.9.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-126.el6_2.9\n           Available: selinux-policy-3.7.19-126.el6_2.10.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-126.el6_2.10\n           Available: selinux-policy-3.7.19-154.el6.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-154.el6\n           Available: selinux-policy-3.7.19-155.el6_3.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-155.el6_3\n           Available: selinux-policy-3.7.19-155.el6_3.4.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-155.el6_3.4\n           Available: selinux-policy-3.7.19-155.el6_3.6.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-155.el6_3.6\n           Available: selinux-policy-3.7.19-155.el6_3.8.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-155.el6_3.8\n           Available: selinux-policy-3.7.19-155.el6_3.13.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-155.el6_3.13\n           Available: selinux-policy-3.7.19-155.el6_3.14.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-155.el6_3.14\n           Available: selinux-policy-3.7.19-195.el6.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-195.el6\n           Available: selinux-policy-3.7.19-195.el6_4.1.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-195.el6_4.1\n           Available: selinux-policy-3.7.19-195.el6_4.3.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-195.el6_4.3\n           Available: selinux-policy-3.7.19-195.el6_4.5.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-195.el6_4.5\n           Available: selinux-policy-3.7.19-195.el6_4.6.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-195.el6_4.6\n           Available: selinux-policy-3.7.19-195.el6_4.10.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-195.el6_4.10\n           Available: selinux-policy-3.7.19-195.el6_4.12.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-195.el6_4.12\n           Available: selinux-policy-3.7.19-195.el6_4.13.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-195.el6_4.13\n           Available: selinux-policy-3.7.19-195.el6_4.18.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-195.el6_4.18\n           Available: selinux-policy-3.7.19-231.el6.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-231.el6\n           Available: selinux-policy-3.7.19-231.el6_5.1.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-231.el6_5.1\n           Available: selinux-policy-3.7.19-231.el6_5.3.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-231.el6_5.3\n           Available: selinux-policy-3.7.19-260.el6.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-260.el6\n           Available: selinux-policy-3.7.19-260.el6_6.1.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-260.el6_6.1\n           Available: selinux-policy-3.7.19-260.el6_6.2.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-260.el6_6.2\n           Available: selinux-policy-3.7.19-260.el6_6.3.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-260.el6_6.3\n           Available: selinux-policy-3.7.19-260.el6_6.5.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-260.el6_6.5\n           Available: selinux-policy-3.7.19-279.el6.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-279.el6\n           Available: selinux-policy-3.7.19-279.el6_7.4.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-279.el6_7.4\n           Available: selinux-policy-3.7.19-279.el6_7.5.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-279.el6_7.5\n           Available: selinux-policy-3.7.19-279.el6_7.6.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-279.el6_7.6\n           Available: selinux-policy-3.7.19-279.el6_7.7.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-279.el6_7.7\n           Available: selinux-policy-3.7.19-279.el6_7.8.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-279.el6_7.8\n           Available: selinux-policy-3.7.19-279.el6_7.9.noarch (rhui-REGION-rhel-server-releases)\n               selinux-policy = 3.7.19-279.el6_7.9\nError: Package: docker-engine-1.10.0-1.el7.centos.x86_64 (/docker-engine-1.10.0-1.el7.centos.x86_64)\n           Requires: libc.so.6(GLIBC_2.17)(64bit)\nError: Package: docker-engine-1.10.0-1.el7.centos.x86_64 (/docker-engine-1.10.0-1.el7.centos.x86_64)\n           Requires: libc.so.6(GLIBC_2.14)(64bit)\nError: Package: docker-engine-1.10.0-1.el7.centos.x86_64 (/docker-engine-1.10.0-1.el7.centos.x86_64)\n           Requires: libsystemd.so.0()(64bit)\nError: Package: docker-engine-1.10.0-1.el7.centos.x86_64 (/docker-engine-1.10.0-1.el7.centos.x86_64)\n           Requires: libsystemd.so.0(LIBSYSTEMD_209)(64bit)\n", "rc": 1, "results": ["Loaded plugins: amazon-id, rhui-lb, search-disabled-repos, security\nSetting up Install Process\nExamining /var/tmp/yum-root-mR4oHh/docker-engine-1.10.0-1.el7.centos.x86_64.rpm: docker-engine-1.10.0-1.el7.centos.x86_64\nMarking /var/tmp/yum-root-mR4oHh/docker-engine-1.10.0-1.el7.centos.x86_64.rpm to be installed\nResolving Dependencies\n--> Running transaction check\n---> Package docker-engine.x86_64 0:1.10.0-1.el7.centos will be installed\n--> Processing Dependency: docker-engine-selinux >= 1.10.0-1.el7.centos for package: docker-engine-1.10.0-1.el7.centos.x86_64\n--> Processing Dependency: selinux-policy >= 3.13.1-23 for package: docker-engine-1.10.0-1.el7.centos.x86_64\n--> Processing Dependency: libc.so.6(GLIBC_2.14)(64bit) for package: docker-engine-1.10.0-1.el7.centos.x86_64\n--> Processing Dependency: libc.so.6(GLIBC_2.17)(64bit) for package: docker-engine-1.10.0-1.el7.centos.x86_64\n--> Processing Dependency: libsystemd.so.0(LIBSYSTEMD_209)(64bit) for package: docker-engine-1.10.0-1.el7.centos.x86_64\n--> Processing Dependency: systemd-units for package: docker-engine-1.10.0-1.el7.centos.x86_64\n--> Processing Dependency: libsystemd.so.0()(64bit) for package: docker-engine-1.10.0-1.el7.centos.x86_64\n--> Finished Dependency Resolution\n You could try using --skip-broken to work around the problem\n You could try running: rpm -Va --nofiles --nodigest\n"]}
+2016-06-02 14:47:20,874 p=14852 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 14:47:20,874 p=14852 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker3.retry
+
+2016-06-02 14:47:20,874 p=14852 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 14:47:20,874 p=14852 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-02 14:47:39,749 p=15101 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 14:47:39,850 p=15101 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 14:47:39,888 p=15101 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 14:47:40,602 p=15101 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 14:47:40,605 p=15101 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-02 14:47:41,197 p=15101 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-02 14:47:41,199 p=15101 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-02 14:47:42,012 p=15101 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-02 14:47:42,014 p=15101 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-02 14:47:42,742 p=15101 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-02 14:47:42,744 p=15101 u=ec2-user |  TASK [Install Docker Engine] ***************************************************
+2016-06-02 14:47:43,799 p=15101 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "No Package matching 'docker-engine' found available, installed or updated", "rc": 0, "results": []}
+2016-06-02 14:47:43,800 p=15101 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 14:47:43,800 p=15101 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-02 14:47:43,800 p=15101 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 14:47:43,801 p=15101 u=ec2-user |  127.0.0.1                  : ok=4    changed=1    unreachable=0    failed=1   
+2016-06-02 15:06:35,563 p=16118 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 15:06:35,616 p=16118 u=ec2-user |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-06-02 15:06:35,661 p=16118 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 15:06:35,699 p=16118 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 15:06:36,213 p=16118 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 15:06:36,216 p=16118 u=ec2-user |  TASK [copy docker.repo] ********************************************************
+2016-06-02 15:06:36,238 p=16118 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "could not find src=/home/ec2-user/ansible/playbooks/docker.repo"}
+2016-06-02 15:06:36,239 p=16118 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 15:06:36,239 p=16118 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker3.retry
+
+2016-06-02 15:06:36,240 p=16118 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 15:06:36,240 p=16118 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-02 15:08:09,152 p=16322 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-02 15:08:09,208 p=16322 u=ec2-user |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-06-02 15:08:09,252 p=16322 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-02 15:08:09,289 p=16322 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-02 15:08:09,780 p=16322 u=ec2-user |  ok: [127.0.0.1]
+2016-06-02 15:08:09,783 p=16322 u=ec2-user |  TASK [copy docker.repo] ********************************************************
+2016-06-02 15:08:09,806 p=16322 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "could not find src=/home/ec2-user/ansible/playbooks/docker.repo"}
+2016-06-02 15:08:09,807 p=16322 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-02 15:08:09,808 p=16322 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker3.retry
+
+2016-06-02 15:08:09,808 p=16322 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-02 15:08:09,808 p=16322 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-03 04:53:21,571 p=28838 u=ec2-user |  ERROR! the role 'docker' was not found in /home/ec2-user/ansible/playbooks/roles:/home/ec2-user/ansible/playbooks:/etc/ansible/roles
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/setup_docker_module.yml': line 3, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- roles:
+    - docker
+      ^ here
+
+2016-06-03 04:56:05,748 p=28850 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 04:56:05,784 p=28850 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 04:56:06,283 p=28850 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 04:56:06,286 p=28850 u=ec2-user |  ERROR! the field 'hosts' is required but was not set
+2016-06-03 04:58:08,426 p=29062 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 04:58:08,467 p=29062 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 04:58:08,944 p=29062 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 04:58:08,947 p=29062 u=ec2-user |  TASK [docker : Install python setup tools] *************************************
+2016-06-03 04:58:09,508 p=29062 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 04:58:09,510 p=29062 u=ec2-user |  TASK [docker : Install Pypi] ***************************************************
+2016-06-03 04:58:09,897 p=29062 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 04:58:09,899 p=29062 u=ec2-user |  TASK [docker : Install docker-py] **********************************************
+2016-06-03 04:58:10,623 p=29062 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 04:58:10,625 p=29062 u=ec2-user |  TASK [docker : Install Docker] *************************************************
+2016-06-03 04:58:11,758 p=29062 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Repo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/product/rhui-client-config-server-6.crt\nRepo rhui-REGION-client-config-server-6 forced skip_if_unavailable=True due to: /etc/pki/rhui/rhui-client-config-server-6.key\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/product/content-rhel6.crt\nRepo rhui-REGION-rhel-server-releases forced skip_if_unavailable=True due to: /etc/pki/rhui/content-rhel6.key\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/cdn.redhat.com-chain.crt\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/product/content-rhel6.crt\nRepo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/content-rhel6.key\n\n\nCould not contact any CDS load balancers: rhui2-cds01.eu-west-1.aws.ce.redhat.com, rhui2-cds02.eu-west-1.aws.ce.redhat.com.\n", "rc": 1, "results": []}
+2016-06-03 04:58:11,759 p=29062 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-03 04:58:11,759 p=29062 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker_module.retry
+
+2016-06-03 04:58:11,760 p=29062 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 04:58:11,760 p=29062 u=ec2-user |  127.0.0.1                  : ok=4    changed=0    unreachable=0    failed=1   
+2016-06-03 05:01:07,974 p=29496 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 05:01:08,014 p=29496 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 05:01:08,515 p=29496 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 05:01:08,518 p=29496 u=ec2-user |  TASK [docker : include] ********************************************************
+2016-06-03 05:01:08,585 p=29496 u=ec2-user |  skipping: [127.0.0.1]
+2016-06-03 05:01:08,588 p=29496 u=ec2-user |  TASK [docker : include] ********************************************************
+2016-06-03 05:01:08,654 p=29496 u=ec2-user |  included: /home/ec2-user/ansible/roles/docker/tasks/RedHat.yml for 127.0.0.1
+2016-06-03 05:01:08,660 p=29496 u=ec2-user |  TASK [docker : Downloading and enable the EPEL repository definitions.] ********
+2016-06-03 05:01:09,559 p=29496 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": true, "cmd": ["rpm", "-Uvh", "--replacepkgs", "http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm"], "delta": "0:00:00.549362", "end": "2016-06-03 05:01:09.533428", "failed": true, "rc": 1, "start": "2016-06-03 05:01:08.984066", "stderr": "ошибка: can't create transaction lock on /var/lib/rpm/.rpm.lock (Отказано в доступе)", "stdout": "Загружается http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm", "stdout_lines": ["Загружается http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm"], "warnings": ["Consider using yum module rather than running rpm"]}
+2016-06-03 05:01:09,560 p=29496 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker_module.retry
+
+2016-06-03 05:01:09,560 p=29496 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 05:01:09,560 p=29496 u=ec2-user |  127.0.0.1                  : ok=2    changed=0    unreachable=0    failed=1   
+2016-06-03 05:02:57,592 p=29755 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 05:02:57,637 p=29755 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 05:02:58,113 p=29755 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 05:02:58,116 p=29755 u=ec2-user |  TASK [docker : set_fact] *******************************************************
+2016-06-03 05:02:58,182 p=29755 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 05:02:58,184 p=29755 u=ec2-user |  TASK [docker : gather os specific variables] ***********************************
+2016-06-03 05:02:58,269 p=29755 u=ec2-user |  ok: [127.0.0.1] => (item=/home/ec2-user/ansible/roles/docker/vars/redhat.yml)
+2016-06-03 05:02:58,282 p=29755 u=ec2-user |  TASK [docker : check for minimum kernel version] *******************************
+2016-06-03 05:02:58,333 p=29755 u=ec2-user |  skipping: [127.0.0.1]
+2016-06-03 05:02:58,336 p=29755 u=ec2-user |  TASK [docker : ensure docker requirements packages are installed] **************
+2016-06-03 05:02:58,379 p=29755 u=ec2-user |  [DEPRECATION WARNING]: Skipping task due to undefined Error, in the future this will be a fatal error.: 'item' is undefined.
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-06-03 05:02:58,388 p=29755 u=ec2-user |  TASK [docker : ensure docker repository public key is installed] ***************
+2016-06-03 05:02:58,439 p=29755 u=ec2-user |  TASK [docker : ensure docker repository is enabled] ****************************
+2016-06-03 05:02:58,489 p=29755 u=ec2-user |  TASK [docker : ensure docker packages are installed] ***************************
+2016-06-03 05:02:58,532 p=29755 u=ec2-user |  [DEPRECATION WARNING]: Skipping task due to undefined Error, in the future this will be a fatal error.: 'item' is undefined.
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-06-03 05:02:58,541 p=29755 u=ec2-user |  TASK [docker : ensure docker service is started and enabled] *******************
+2016-06-03 05:02:58,889 p=29755 u=ec2-user |  failed: [127.0.0.1] (item=docker) => {"failed": true, "item": "docker", "msg": "no service or tool found for: docker"}
+2016-06-03 05:02:58,892 p=29755 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-03 05:02:58,892 p=29755 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker_module.retry
+
+2016-06-03 05:02:58,892 p=29755 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 05:02:58,893 p=29755 u=ec2-user |  127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1   
+2016-06-03 05:03:14,151 p=30016 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 05:03:14,270 p=30016 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 05:03:14,314 p=30016 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 05:03:14,785 p=30016 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 05:03:14,788 p=30016 u=ec2-user |  TASK [docker : set_fact] *******************************************************
+2016-06-03 05:03:14,853 p=30016 u=ec2-user |  ok: [127.0.0.1] => {"ansible_facts": {"ansible_distribution": "redhat"}, "changed": false}
+2016-06-03 05:03:14,855 p=30016 u=ec2-user |  TASK [docker : gather os specific variables] ***********************************
+2016-06-03 05:03:14,942 p=30016 u=ec2-user |  ok: [127.0.0.1] => (item=/home/ec2-user/ansible/roles/docker/vars/redhat.yml) => {"ansible_facts": {"docker_kernel_min_version": "0", "docker_package_info": {"args": {"name": "{{ item }}", "state": "latest", "update_cache": true}, "pkg_mgr": "yum", "pkgs": ["docker"], "pre_pkgs": ["curl"]}, "docker_pip_path": "/usr/bin/pip", "docker_repo_info": {"args": {}, "pkg_repo": "", "repos": []}, "docker_repo_key_info": {"args": {}, "pkg_key": "", "repo_keys": []}}, "item": "/home/ec2-user/ansible/roles/docker/vars/redhat.yml"}
+2016-06-03 05:03:14,952 p=30016 u=ec2-user |  TASK [docker : check for minimum kernel version] *******************************
+2016-06-03 05:03:15,004 p=30016 u=ec2-user |  skipping: [127.0.0.1] => {"changed": false, "skip_reason": "Conditional check failed", "skipped": true}
+2016-06-03 05:03:15,006 p=30016 u=ec2-user |  TASK [docker : ensure docker requirements packages are installed] **************
+2016-06-03 05:03:15,049 p=30016 u=ec2-user |  [DEPRECATION WARNING]: Skipping task due to undefined Error, in the future this will be a fatal error.: 'item' is undefined.
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-06-03 05:03:15,058 p=30016 u=ec2-user |  TASK [docker : ensure docker repository public key is installed] ***************
+2016-06-03 05:03:15,108 p=30016 u=ec2-user |  TASK [docker : ensure docker repository is enabled] ****************************
+2016-06-03 05:03:15,159 p=30016 u=ec2-user |  TASK [docker : ensure docker packages are installed] ***************************
+2016-06-03 05:03:15,201 p=30016 u=ec2-user |  [DEPRECATION WARNING]: Skipping task due to undefined Error, in the future this will be a fatal error.: 'item' is undefined.
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-06-03 05:03:15,210 p=30016 u=ec2-user |  TASK [docker : ensure docker service is started and enabled] *******************
+2016-06-03 05:03:15,562 p=30016 u=ec2-user |  failed: [127.0.0.1] (item=docker) => {"failed": true, "item": "docker", "msg": "no service or tool found for: docker"}
+2016-06-03 05:03:15,564 p=30016 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-03 05:03:15,564 p=30016 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker_module.retry
+
+2016-06-03 05:03:15,564 p=30016 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 05:03:15,565 p=30016 u=ec2-user |  127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1   
+2016-06-03 05:07:20,122 p=30311 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 05:07:20,236 p=30311 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 05:07:20,280 p=30311 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 05:07:20,766 p=30311 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 05:07:20,769 p=30311 u=ec2-user |  TASK [docker : check whether docker exists] ************************************
+2016-06-03 05:07:21,067 p=30311 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "cmd": "command -v docker", "delta": "0:00:00.002181", "end": "2016-06-03 05:07:21.050352", "failed": true, "rc": 1, "start": "2016-06-03 05:07:21.048171", "stderr": "", "stdout": "", "stdout_lines": [], "warnings": []}
+2016-06-03 05:07:21,068 p=30311 u=ec2-user |  ...ignoring
+2016-06-03 05:07:21,070 p=30311 u=ec2-user |  TASK [docker : include os specific variables] **********************************
+2016-06-03 05:07:21,147 p=30311 u=ec2-user |  ok: [127.0.0.1] => (item=/home/ec2-user/ansible/roles/docker/vars/installer/default.yml) => {"ansible_facts": {"docker_installer": "default", "docker_package": "docker"}, "item": "/home/ec2-user/ansible/roles/docker/vars/installer/default.yml"}
+2016-06-03 05:07:21,155 p=30311 u=ec2-user |  TASK [docker : include] ********************************************************
+2016-06-03 05:07:21,220 p=30311 u=ec2-user |  included: /home/ec2-user/ansible/roles/docker/tasks/install.yml for 127.0.0.1
+2016-06-03 05:07:21,230 p=30311 u=ec2-user |  TASK [docker : include] ********************************************************
+2016-06-03 05:07:21,297 p=30311 u=ec2-user |  skipping: [127.0.0.1] => {"changed": false, "skip_reason": "Conditional check failed", "skipped": true}
+2016-06-03 05:07:21,300 p=30311 u=ec2-user |  TASK [docker : include] ********************************************************
+2016-06-03 05:07:21,401 p=30311 u=ec2-user |  included: /home/ec2-user/ansible/roles/docker/tasks/installer/default.yml for 127.0.0.1
+2016-06-03 05:07:21,415 p=30311 u=ec2-user |  TASK [docker : create install script temp file path] ***************************
+2016-06-03 05:07:21,537 p=30311 u=ec2-user |  ok: [127.0.0.1] => {"ansible_facts": {"docker_install_script_path": "/tmp/ansible-docker-500-1464944840-15710088581550"}, "changed": false}
+2016-06-03 05:07:21,540 p=30311 u=ec2-user |  TASK [docker : download docker official install script] ************************
+2016-06-03 05:07:22,119 p=30311 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Failed to validate the SSL certificate for get.docker.com:443. Make sure your managed systems have a valid CA certificate installed.  If the website serving the url uses SNI you need python >= 2.7.9 on your managed machine.  You can use validate_certs=False if you do not need to confirm the server\\s identity but this is unsafe and not recommended Paths checked for this platform: /etc/ssl/certs, /etc/pki/ca-trust/extracted/pem, /etc/pki/tls/certs, /usr/share/ca-certificates/cacert.org, /etc/ansible"}
+2016-06-03 05:07:22,120 p=30311 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker_module.retry
+
+2016-06-03 05:07:22,121 p=30311 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 05:07:22,121 p=30311 u=ec2-user |  127.0.0.1                  : ok=6    changed=0    unreachable=0    failed=1   
+2016-06-03 05:12:06,249 p=30640 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 05:12:06,352 p=30640 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 05:12:06,391 p=30640 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 05:12:06,880 p=30640 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 05:12:06,883 p=30640 u=ec2-user |  TASK [docker : Install docker and dependencies] ********************************
+2016-06-03 05:12:06,951 p=30640 u=ec2-user |  included: /home/ec2-user/ansible/roles/docker/tasks/os_family/RedHat.yml for 127.0.0.1
+2016-06-03 05:12:06,958 p=30640 u=ec2-user |  TASK [docker : install yum repo] ***********************************************
+2016-06-03 05:12:07,701 p=30640 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "checksum": "d18d079b7accd82611e90a26a351f02b8d05c499", "failed": true, "msg": "Destination /etc/yum.repos.d not writable"}
+2016-06-03 05:12:07,702 p=30640 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker_module.retry
+
+2016-06-03 05:12:07,702 p=30640 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 05:12:07,703 p=30640 u=ec2-user |  127.0.0.1                  : ok=2    changed=0    unreachable=0    failed=1   
+2016-06-03 05:13:17,206 p=30963 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 05:13:17,311 p=30963 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 05:13:17,351 p=30963 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 05:13:17,844 p=30963 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 05:13:17,847 p=30963 u=ec2-user |  TASK [docker : Install docker and dependencies] ********************************
+2016-06-03 05:13:17,915 p=30963 u=ec2-user |  included: /home/ec2-user/ansible/roles/docker/tasks/os_family/RedHat.yml for 127.0.0.1
+2016-06-03 05:13:17,922 p=30963 u=ec2-user |  TASK [docker : install yum repo] ***********************************************
+2016-06-03 05:13:18,669 p=30963 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "checksum": "d18d079b7accd82611e90a26a351f02b8d05c499", "failed": true, "msg": "Destination /etc/yum.repos.d not writable"}
+2016-06-03 05:13:18,670 p=30963 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker_module.retry
+
+2016-06-03 05:13:18,670 p=30963 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 05:13:18,670 p=30963 u=ec2-user |  127.0.0.1                  : ok=2    changed=0    unreachable=0    failed=1   
+2016-06-03 08:53:36,283 p=2790 u=ec2-user |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-06-03 08:53:36,428 p=2790 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 08:53:36,504 p=2790 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 08:53:37,560 p=2790 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:53:37,563 p=2790 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 08:53:38,268 p=2790 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:53:38,271 p=2790 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 08:53:39,083 p=2790 u=ec2-user |  changed: [127.0.0.1]
+2016-06-03 08:53:39,085 p=2790 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 08:53:39,991 p=2790 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:53:39,993 p=2790 u=ec2-user |  TASK [Install docker.io] *******************************************************
+2016-06-03 08:53:41,295 p=2790 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "No Package matching 'docker.io' found available, installed or updated", "rc": 0, "results": []}
+2016-06-03 08:53:41,296 p=2790 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-03 08:53:41,297 p=2790 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-03 08:53:41,297 p=2790 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 08:53:41,297 p=2790 u=ec2-user |  127.0.0.1                  : ok=4    changed=1    unreachable=0    failed=1   
+2016-06-03 08:54:47,452 p=3228 u=ec2-user |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-06-03 08:54:47,537 p=3228 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 08:54:47,574 p=3228 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 08:54:48,554 p=3228 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:54:48,556 p=3228 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 08:54:49,281 p=3228 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:54:49,283 p=3228 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 08:54:50,046 p=3228 u=ec2-user |  changed: [127.0.0.1]
+2016-06-03 08:54:50,048 p=3228 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 08:54:50,780 p=3228 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:54:50,782 p=3228 u=ec2-user |  TASK [Install docker.io] *******************************************************
+2016-06-03 08:54:52,081 p=3228 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "No Package matching 'docker.io' found available, installed or updated", "rc": 0, "results": []}
+2016-06-03 08:54:52,082 p=3228 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-03 08:54:52,083 p=3228 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-03 08:54:52,083 p=3228 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 08:54:52,083 p=3228 u=ec2-user |  127.0.0.1                  : ok=4    changed=1    unreachable=0    failed=1   
+2016-06-03 08:55:35,691 p=3642 u=ec2-user |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-06-03 08:55:35,740 p=3642 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 08:55:35,777 p=3642 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 08:55:36,257 p=3642 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:55:36,259 p=3642 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 08:55:36,962 p=3642 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:55:36,965 p=3642 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 08:55:37,345 p=3642 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:55:37,347 p=3642 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 08:55:38,075 p=3642 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:55:38,077 p=3642 u=ec2-user |  TASK [Install docker.io] *******************************************************
+2016-06-03 08:55:39,396 p=3642 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "No Package matching 'docker.io' found available, installed or updated", "rc": 0, "results": []}
+2016-06-03 08:55:39,397 p=3642 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-03 08:55:39,397 p=3642 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-03 08:55:39,398 p=3642 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 08:55:39,398 p=3642 u=ec2-user |  127.0.0.1                  : ok=4    changed=0    unreachable=0    failed=1   
+2016-06-03 08:56:46,967 p=4043 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 08:56:47,004 p=4043 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 08:56:47,970 p=4043 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:56:47,973 p=4043 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 08:56:48,700 p=4043 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:56:48,702 p=4043 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 08:56:49,441 p=4043 u=ec2-user |  changed: [127.0.0.1]
+2016-06-03 08:56:49,443 p=4043 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 08:56:50,165 p=4043 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:56:50,167 p=4043 u=ec2-user |  TASK [Install docker.io] *******************************************************
+2016-06-03 08:56:51,466 p=4043 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "No Package matching 'docker.io' found available, installed or updated", "rc": 0, "results": []}
+2016-06-03 08:56:51,467 p=4043 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-03 08:56:51,467 p=4043 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-03 08:56:51,467 p=4043 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 08:56:51,467 p=4043 u=ec2-user |  127.0.0.1                  : ok=4    changed=1    unreachable=0    failed=1   
+2016-06-03 08:57:00,024 p=4455 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 08:57:00,123 p=4455 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 08:57:00,162 p=4455 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 08:57:00,878 p=4455 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 08:57:00,881 p=4455 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 08:57:01,590 p=4455 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-03 08:57:01,592 p=4455 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 08:57:02,353 p=4455 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-03 08:57:02,355 p=4455 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 08:57:03,079 p=4455 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-03 08:57:03,081 p=4455 u=ec2-user |  TASK [Install docker.io] *******************************************************
+2016-06-03 08:57:04,385 p=4455 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "No Package matching 'docker.io' found available, installed or updated", "rc": 0, "results": []}
+2016-06-03 08:57:04,386 p=4455 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-03 08:57:04,386 p=4455 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-03 08:57:04,386 p=4455 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 08:57:04,387 p=4455 u=ec2-user |  127.0.0.1                  : ok=4    changed=1    unreachable=0    failed=1   
+2016-06-03 09:00:32,841 p=4869 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 09:00:32,942 p=4869 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 09:00:32,981 p=4869 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 09:00:34,006 p=4869 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 09:00:34,009 p=4869 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 09:00:34,727 p=4869 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-03 09:00:34,729 p=4869 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 09:00:35,501 p=4869 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-03 09:00:35,503 p=4869 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 09:00:36,235 p=4869 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-03 09:00:36,237 p=4869 u=ec2-user |  TASK [Install docker.io] *******************************************************
+2016-06-03 09:00:39,597 p=4869 u=ec2-user |  changed: [127.0.0.1] => {"changed": true, "msg": "", "rc": 0, "results": ["Loaded plugins: amazon-id, rhui-lb, search-disabled-repos, security\nSetting up Install Process\nResolving Dependencies\n--> Running transaction check\n---> Package docker.x86_64 0:1.5-5.el6 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package           Arch              Version              Repository       Size\n================================================================================\nInstalling:\n docker            x86_64            1.5-5.el6            epel             19 k\n\nTransaction Summary\n================================================================================\nInstall       1 Package(s)\n\nTotal download size: 19 k\nInstalled size: 37 k\nDownloading Packages:\nRunning rpm_check_debug\nRunning Transaction Test\nTransaction Test Succeeded\nRunning Transaction\n\r  Installing : docker-1.5-5.el6.x86_64                                      1/1 \n\r  Verifying  : docker-1.5-5.el6.x86_64                                      1/1 \n\nInstalled:\n  docker.x86_64 0:1.5-5.el6                                                     \n\nComplete!\n"]}
+2016-06-03 09:00:39,599 p=4869 u=ec2-user |  TASK [Start Docker service] ****************************************************
+2016-06-03 09:00:39,918 p=4869 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "no service or tool found for: docker"}
+2016-06-03 09:00:39,918 p=4869 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-03 09:00:39,919 p=4869 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-03 09:00:39,919 p=4869 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 09:00:39,919 p=4869 u=ec2-user |  127.0.0.1                  : ok=5    changed=2    unreachable=0    failed=1   
+2016-06-03 09:04:27,116 p=5358 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 09:04:27,214 p=5358 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 09:04:27,252 p=5358 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 09:04:28,233 p=5358 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 09:04:28,235 p=5358 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 09:04:28,942 p=5358 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-03 09:04:28,944 p=5358 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 09:04:29,704 p=5358 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-03 09:04:29,706 p=5358 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 09:04:30,430 p=5358 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-03 09:04:30,432 p=5358 u=ec2-user |  TASK [Install docker-io] *******************************************************
+2016-06-03 09:04:34,974 p=5358 u=ec2-user |  changed: [127.0.0.1] => {"changed": true, "msg": "", "rc": 0, "results": ["Loaded plugins: amazon-id, rhui-lb, search-disabled-repos, security\nSetting up Install Process\nResolving Dependencies\n--> Running transaction check\n---> Package docker-io.x86_64 0:1.7.1-2.el6 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package            Arch            Version                 Repository     Size\n================================================================================\nInstalling:\n docker-io          x86_64          1.7.1-2.el6             epel          4.6 M\n\nTransaction Summary\n================================================================================\nInstall       1 Package(s)\n\nTotal download size: 4.6 M\nInstalled size: 19 M\nDownloading Packages:\nRunning rpm_check_debug\nRunning Transaction Test\nTransaction Test Succeeded\nRunning Transaction\n\r  Installing : docker-io-1.7.1-2.el6.x86_64                                 1/1 \n\r  Verifying  : docker-io-1.7.1-2.el6.x86_64                                 1/1 \n\nInstalled:\n  docker-io.x86_64 0:1.7.1-2.el6                                                \n\nComplete!\n"]}
+2016-06-03 09:04:34,977 p=5358 u=ec2-user |  TASK [Start Docker service] ****************************************************
+2016-06-03 09:04:36,490 p=5358 u=ec2-user |  changed: [127.0.0.1] => {"changed": true, "enabled": true, "name": "docker", "state": "started"}
+2016-06-03 09:04:36,492 p=5358 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 09:04:36,492 p=5358 u=ec2-user |  127.0.0.1                  : ok=6    changed=3    unreachable=0    failed=0   
+2016-06-03 09:08:19,237 p=5986 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 09:08:19,336 p=5986 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 09:08:19,373 p=5986 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 09:08:20,373 p=5986 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 09:08:20,376 p=5986 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 09:08:21,086 p=5986 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-03 09:08:21,088 p=5986 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 09:08:21,840 p=5986 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-03 09:08:21,842 p=5986 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 09:08:22,564 p=5986 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-03 09:08:22,566 p=5986 u=ec2-user |  TASK [Install docker-io] *******************************************************
+2016-06-03 09:08:23,268 p=5986 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["docker-io-1.7.1-2.el6.x86_64 providing docker-io is already installed"]}
+2016-06-03 09:08:23,270 p=5986 u=ec2-user |  TASK [Start Docker service] ****************************************************
+2016-06-03 09:08:23,695 p=5986 u=ec2-user |  changed: [127.0.0.1] => {"changed": true, "enabled": true, "name": "docker", "state": "started"}
+2016-06-03 09:08:23,697 p=5986 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 09:08:23,697 p=5986 u=ec2-user |  127.0.0.1                  : ok=6    changed=2    unreachable=0    failed=0   
+2016-06-03 09:09:45,786 p=6468 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 09:09:45,844 p=6468 u=ec2-user |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-06-03 09:09:45,886 p=6468 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 09:09:45,924 p=6468 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 09:09:46,920 p=6468 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 09:09:46,923 p=6468 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 09:09:47,638 p=6468 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-03 09:09:47,640 p=6468 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 09:09:48,388 p=6468 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-03 09:09:48,390 p=6468 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 09:09:49,117 p=6468 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-03 09:09:49,119 p=6468 u=ec2-user |  TASK [Install docker-io] *******************************************************
+2016-06-03 09:09:49,822 p=6468 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["docker-io-1.7.1-2.el6.x86_64 providing docker-io is already installed"]}
+2016-06-03 09:09:49,824 p=6468 u=ec2-user |  TASK [Start Docker service] ****************************************************
+2016-06-03 09:09:50,141 p=6468 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Error when trying to on docker: rc=1 У вас недостаточно полномочий для выполнения этого действия.\n"}
+2016-06-03 09:09:50,142 p=6468 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-03 09:09:50,142 p=6468 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-03 09:09:50,142 p=6468 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 09:09:50,142 p=6468 u=ec2-user |  127.0.0.1                  : ok=5    changed=1    unreachable=0    failed=1   
+2016-06-03 09:10:18,233 p=6934 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 09:10:18,334 p=6934 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 09:10:18,373 p=6934 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 09:10:19,107 p=6934 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 09:10:19,109 p=6934 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 09:10:19,813 p=6934 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-03 09:10:19,815 p=6934 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 09:10:20,559 p=6934 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-03 09:10:20,562 p=6934 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 09:10:21,285 p=6934 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-03 09:10:21,287 p=6934 u=ec2-user |  TASK [Install docker-io] *******************************************************
+2016-06-03 09:10:21,991 p=6934 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["docker-io-1.7.1-2.el6.x86_64 providing docker-io is already installed"]}
+2016-06-03 09:10:21,993 p=6934 u=ec2-user |  TASK [Start Docker service] ****************************************************
+2016-06-03 09:10:22,437 p=6934 u=ec2-user |  changed: [127.0.0.1] => {"changed": true, "enabled": true, "name": "docker", "state": "started"}
+2016-06-03 09:10:22,439 p=6934 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 09:10:22,439 p=6934 u=ec2-user |  127.0.0.1                  : ok=6    changed=2    unreachable=0    failed=0   
+2016-06-03 09:10:50,439 p=7410 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 09:10:50,540 p=7410 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 09:10:50,578 p=7410 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 09:10:51,314 p=7410 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 09:10:51,316 p=7410 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 09:10:52,034 p=7410 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-03 09:10:52,036 p=7410 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 09:10:52,799 p=7410 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-03 09:10:52,801 p=7410 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 09:10:53,529 p=7410 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-03 09:10:53,531 p=7410 u=ec2-user |  TASK [Install docker-io] *******************************************************
+2016-06-03 09:10:54,244 p=7410 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["docker-io-1.7.1-2.el6.x86_64 providing docker-io is already installed"]}
+2016-06-03 09:10:54,246 p=7410 u=ec2-user |  TASK [Start Docker service] ****************************************************
+2016-06-03 09:10:54,643 p=7410 u=ec2-user |  changed: [127.0.0.1] => {"changed": true, "enabled": true, "name": "docker", "state": "started"}
+2016-06-03 09:10:54,645 p=7410 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 09:10:54,645 p=7410 u=ec2-user |  127.0.0.1                  : ok=6    changed=2    unreachable=0    failed=0   
+2016-06-03 09:11:19,170 p=7882 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 09:11:19,269 p=7882 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 09:11:19,307 p=7882 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 09:11:20,018 p=7882 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 09:11:20,021 p=7882 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 09:11:20,725 p=7882 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-03 09:11:20,727 p=7882 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 09:11:21,492 p=7882 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-03 09:11:21,494 p=7882 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 09:11:22,229 p=7882 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-03 09:11:22,231 p=7882 u=ec2-user |  TASK [Install docker-io] *******************************************************
+2016-06-03 09:11:22,950 p=7882 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["docker-io-1.7.1-2.el6.x86_64 providing docker-io is already installed"]}
+2016-06-03 09:11:22,952 p=7882 u=ec2-user |  TASK [Start Docker service] ****************************************************
+2016-06-03 09:11:23,300 p=7882 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "name": "docker", "state": "started"}
+2016-06-03 09:11:23,302 p=7882 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 09:11:23,302 p=7882 u=ec2-user |  127.0.0.1                  : ok=6    changed=1    unreachable=0    failed=0   
+2016-06-03 09:11:39,801 p=8353 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 09:11:39,901 p=8353 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 09:11:39,940 p=8353 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 09:11:40,657 p=8353 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 09:11:40,659 p=8353 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 09:11:41,379 p=8353 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-03 09:11:41,381 p=8353 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 09:11:42,156 p=8353 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-03 09:11:42,158 p=8353 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 09:11:42,890 p=8353 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-03 09:11:42,892 p=8353 u=ec2-user |  TASK [Install docker-io] *******************************************************
+2016-06-03 09:11:43,612 p=8353 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["docker-io-1.7.1-2.el6.x86_64 providing docker-io is already installed"]}
+2016-06-03 09:11:43,614 p=8353 u=ec2-user |  TASK [Start Docker service] ****************************************************
+2016-06-03 09:11:43,958 p=8353 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "name": "docker", "state": "started"}
+2016-06-03 09:11:43,959 p=8353 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 09:11:43,960 p=8353 u=ec2-user |  127.0.0.1                  : ok=6    changed=1    unreachable=0    failed=0   
+2016-06-03 09:14:43,687 p=8828 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 09:14:43,786 p=8828 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 09:14:43,824 p=8828 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 09:14:44,803 p=8828 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 09:14:44,805 p=8828 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 09:14:45,525 p=8828 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-03 09:14:45,527 p=8828 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 09:14:45,824 p=8828 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Failed to find required executable virtualenv"}
+2016-06-03 09:14:45,825 p=8828 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-03 09:14:45,825 p=8828 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-03 09:14:45,825 p=8828 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 09:14:45,825 p=8828 u=ec2-user |  127.0.0.1                  : ok=2    changed=0    unreachable=0    failed=1   
+2016-06-03 12:02:11,405 p=9657 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 12:02:11,504 p=9657 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 12:02:11,542 p=9657 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 12:02:12,545 p=9657 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 12:02:12,547 p=9657 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 12:02:13,265 p=9657 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-03 12:02:13,267 p=9657 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 12:02:13,563 p=9657 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Failed to find required executable virtualenv"}
+2016-06-03 12:02:13,566 p=9657 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-03 12:02:13,567 p=9657 u=ec2-user |  	to retry, use: --limit @playbooks/setup_docker.retry
+
+2016-06-03 12:02:13,567 p=9657 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 12:02:13,567 p=9657 u=ec2-user |  127.0.0.1                  : ok=2    changed=0    unreachable=0    failed=1   
+2016-06-03 12:02:29,443 p=9962 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-03 12:02:29,543 p=9962 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 12:02:29,581 p=9962 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 12:02:30,288 p=9962 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 12:02:30,291 p=9962 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 12:02:30,986 p=9962 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["python-setuptools-0.6.10-3.el6.noarch providing python-setuptools is already installed"]}
+2016-06-03 12:02:30,988 p=9962 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 12:02:31,745 p=9962 u=ec2-user |  changed: [127.0.0.1] => {"binary": "/usr/bin/easy_install", "changed": true, "name": "pip", "virtualenv": null}
+2016-06-03 12:02:31,747 p=9962 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 12:02:32,467 p=9962 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "cmd": "/usr/bin/pip install docker-py", "name": "docker-py", "requirements": null, "state": "present", "stderr": "DEPRECATION: Python 2.6 is no longer supported by the Python core team, please upgrade your Python. A future version of pip will drop support for Python 2.6\n", "stdout": "Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages\nRequirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)\nRequirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)\n", "stdout_lines": ["Requirement already satisfied (use --upgrade to upgrade): docker-py in /usr/lib/python2.6/site-packages", "Requirement already satisfied (use --upgrade to upgrade): ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): six>=1.4.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): requests>=2.5.2 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): websocket-client>=0.32.0 in /usr/lib/python2.6/site-packages (from docker-py)", "Requirement already satisfied (use --upgrade to upgrade): argparse in /usr/lib/python2.6/site-packages (from websocket-client>=0.32.0->docker-py)"], "version": null, "virtualenv": null}
+2016-06-03 12:02:32,469 p=9962 u=ec2-user |  TASK [Install docker-io] *******************************************************
+2016-06-03 12:02:33,171 p=9962 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "msg": "", "rc": 0, "results": ["docker-io-1.7.1-2.el6.x86_64 providing docker-io is already installed"]}
+2016-06-03 12:02:33,174 p=9962 u=ec2-user |  TASK [Start Docker service] ****************************************************
+2016-06-03 12:02:33,556 p=9962 u=ec2-user |  ok: [127.0.0.1] => {"changed": false, "name": "docker", "state": "started"}
+2016-06-03 12:02:33,557 p=9962 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 12:02:33,558 p=9962 u=ec2-user |  127.0.0.1                  : ok=6    changed=1    unreachable=0    failed=0   
+2016-06-03 12:03:29,873 p=10435 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-03 12:03:29,910 p=10435 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-03 12:03:30,637 p=10435 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 12:03:30,640 p=10435 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-03 12:03:31,336 p=10435 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 12:03:31,338 p=10435 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-03 12:03:32,092 p=10435 u=ec2-user |  changed: [127.0.0.1]
+2016-06-03 12:03:32,094 p=10435 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-03 12:03:32,823 p=10435 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 12:03:32,825 p=10435 u=ec2-user |  TASK [Install docker-io] *******************************************************
+2016-06-03 12:03:33,526 p=10435 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 12:03:33,528 p=10435 u=ec2-user |  TASK [Start Docker service] ****************************************************
+2016-06-03 12:03:33,868 p=10435 u=ec2-user |  ok: [127.0.0.1]
+2016-06-03 12:03:33,870 p=10435 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-03 12:03:33,871 p=10435 u=ec2-user |  127.0.0.1                  : ok=6    changed=1    unreachable=0    failed=0   
+2016-06-09 06:00:23,798 p=5639 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/springxd-images.yml': line 4, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: pull images
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/springxd-images.yml': line 4, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: pull images
+    ^ here
+
+2016-06-09 06:05:47,305 p=5692 u=ec2-user |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/springxd-images.yml': line 4, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: pull images
+    ^ here
+
+
+The error appears to have been in '/home/ec2-user/ansible/playbooks/springxd-images.yml': line 4, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: pull images
+    ^ here
+
+2016-06-09 07:24:34,942 p=5949 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:24:35,012 p=5949 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:24:35,819 p=5949 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:24:35,822 p=5949 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 07:24:36,266 p=5949 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "ConnectionError: ('Connection aborted.', error(13, '\\xd0\\x9e\\xd1\\x82\\xd0\\xba\\xd0\\xb0\\xd0\\xb7\\xd0\\xb0\\xd0\\xbd\\xd0\\xbe \\xd0\\xb2 \\xd0\\xb4\\xd0\\xbe\\xd1\\x81\\xd1\\x82\\xd1\\x83\\xd0\\xbf\\xd0\\xb5'))"}
+2016-06-09 07:24:36,267 p=5949 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 07:24:36,267 p=5949 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 07:24:36,267 p=5949 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:24:36,268 p=5949 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-09 07:25:03,159 p=6208 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-09 07:25:03,256 p=6208 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:25:03,294 p=6208 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:25:03,775 p=6208 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:25:03,778 p=6208 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 07:25:04,186 p=6208 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "ConnectionError: ('Connection aborted.', error(13, '\\xd0\\x9e\\xd1\\x82\\xd0\\xba\\xd0\\xb0\\xd0\\xb7\\xd0\\xb0\\xd0\\xbd\\xd0\\xbe \\xd0\\xb2 \\xd0\\xb4\\xd0\\xbe\\xd1\\x81\\xd1\\x82\\xd1\\x83\\xd0\\xbf\\xd0\\xb5'))"}
+2016-06-09 07:25:04,187 p=6208 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 07:25:04,188 p=6208 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 07:25:04,188 p=6208 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:25:04,188 p=6208 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-09 07:25:30,808 p=6461 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-09 07:25:30,903 p=6461 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:25:30,940 p=6461 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:25:31,411 p=6461 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:25:31,414 p=6461 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 07:25:31,820 p=6461 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "ConnectionError: ('Connection aborted.', error(13, '\\xd0\\x9e\\xd1\\x82\\xd0\\xba\\xd0\\xb0\\xd0\\xb7\\xd0\\xb0\\xd0\\xbd\\xd0\\xbe \\xd0\\xb2 \\xd0\\xb4\\xd0\\xbe\\xd1\\x81\\xd1\\x82\\xd1\\x83\\xd0\\xbf\\xd0\\xb5'))"}
+2016-06-09 07:25:31,821 p=6461 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 07:25:31,821 p=6461 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 07:25:31,821 p=6461 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:25:31,821 p=6461 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-09 07:26:58,549 p=6715 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-09 07:26:58,643 p=6715 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:26:58,680 p=6715 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:26:59,417 p=6715 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:26:59,420 p=6715 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 07:26:59,839 p=6715 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "ConnectionError: ('Connection aborted.', error(13, '\\xd0\\x9e\\xd1\\x82\\xd0\\xba\\xd0\\xb0\\xd0\\xb7\\xd0\\xb0\\xd0\\xbd\\xd0\\xbe \\xd0\\xb2 \\xd0\\xb4\\xd0\\xbe\\xd1\\x81\\xd1\\x82\\xd1\\x83\\xd0\\xbf\\xd0\\xb5'))"}
+2016-06-09 07:26:59,840 p=6715 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 07:26:59,841 p=6715 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 07:26:59,841 p=6715 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:26:59,841 p=6715 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-09 07:29:27,957 p=7110 u=ec2-user |  Using /home/ec2-user/ansible/ansible.cfg as config file
+2016-06-09 07:29:28,050 p=7110 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:29:28,087 p=7110 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:29:29,100 p=7110 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:29:29,103 p=7110 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 07:29:29,547 p=7110 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Docker API error: client is newer than server (client API version: 1.22, server API version: 1.19)"}
+2016-06-09 07:29:29,548 p=7110 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 07:29:29,548 p=7110 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 07:29:29,548 p=7110 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:29:29,548 p=7110 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-09 07:39:59,730 p=7496 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:39:59,767 p=7496 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:40:00,739 p=7496 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:40:00,741 p=7496 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-09 07:40:01,521 p=7496 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:40:01,523 p=7496 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-09 07:40:02,348 p=7496 u=ec2-user |  changed: [127.0.0.1]
+2016-06-09 07:40:02,350 p=7496 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-09 07:40:03,259 p=7496 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:40:03,261 p=7496 u=ec2-user |  TASK [Install docker-io] *******************************************************
+2016-06-09 07:40:03,974 p=7496 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:40:03,977 p=7496 u=ec2-user |  TASK [Start Docker service] ****************************************************
+2016-06-09 07:40:04,365 p=7496 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:40:04,367 p=7496 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:40:04,367 p=7496 u=ec2-user |  127.0.0.1                  : ok=6    changed=1    unreachable=0    failed=0   
+2016-06-09 07:42:49,005 p=8001 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:42:49,042 p=8001 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:42:50,520 p=8001 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:42:50,522 p=8001 u=ec2-user |  TASK [Install python setup tools] **********************************************
+2016-06-09 07:42:51,275 p=8001 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:42:51,277 p=8001 u=ec2-user |  TASK [Install Pypi] ************************************************************
+2016-06-09 07:42:52,044 p=8001 u=ec2-user |  changed: [127.0.0.1]
+2016-06-09 07:42:52,046 p=8001 u=ec2-user |  TASK [Install docker-py] *******************************************************
+2016-06-09 07:42:52,775 p=8001 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:42:52,777 p=8001 u=ec2-user |  TASK [Install docker-io] *******************************************************
+2016-06-09 07:42:53,485 p=8001 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:42:53,487 p=8001 u=ec2-user |  TASK [Start Docker service] ****************************************************
+2016-06-09 07:42:53,865 p=8001 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:42:53,867 p=8001 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:42:53,867 p=8001 u=ec2-user |  127.0.0.1                  : ok=6    changed=1    unreachable=0    failed=0   
+2016-06-09 07:48:15,014 p=8555 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:48:15,050 p=8555 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:48:16,046 p=8555 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:48:16,049 p=8555 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 07:48:16,486 p=8555 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "ConnectionError: ('Connection aborted.', error(2, '\\xd0\\x9d\\xd0\\xb5\\xd1\\x82 \\xd1\\x82\\xd0\\xb0\\xd0\\xba\\xd0\\xbe\\xd0\\xb3\\xd0\\xbe \\xd1\\x84\\xd0\\xb0\\xd0\\xb9\\xd0\\xbb\\xd0\\xb0 \\xd0\\xb8\\xd0\\xbb\\xd0\\xb8 \\xd0\\xba\\xd0\\xb0\\xd1\\x82\\xd0\\xb0\\xd0\\xbb\\xd0\\xbe\\xd0\\xb3\\xd0\\xb0'))"}
+2016-06-09 07:48:16,487 p=8555 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 07:48:16,488 p=8555 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 07:48:16,488 p=8555 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:48:16,488 p=8555 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-09 07:52:39,019 p=8855 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:52:39,057 p=8855 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:52:40,069 p=8855 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:52:40,072 p=8855 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 07:52:40,500 p=8855 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "ConnectionError: ('Connection aborted.', error(2, '\\xd0\\x9d\\xd0\\xb5\\xd1\\x82 \\xd1\\x82\\xd0\\xb0\\xd0\\xba\\xd0\\xbe\\xd0\\xb3\\xd0\\xbe \\xd1\\x84\\xd0\\xb0\\xd0\\xb9\\xd0\\xbb\\xd0\\xb0 \\xd0\\xb8\\xd0\\xbb\\xd0\\xb8 \\xd0\\xba\\xd0\\xb0\\xd1\\x82\\xd0\\xb0\\xd0\\xbb\\xd0\\xbe\\xd0\\xb3\\xd0\\xb0'))"}
+2016-06-09 07:52:40,501 p=8855 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 07:52:40,502 p=8855 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 07:52:40,502 p=8855 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:52:40,502 p=8855 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-09 07:52:57,660 p=9120 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:52:57,698 p=9120 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:52:58,404 p=9120 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:52:58,407 p=9120 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 07:52:58,823 p=9120 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "ConnectionError: ('Connection aborted.', error(2, '\\xd0\\x9d\\xd0\\xb5\\xd1\\x82 \\xd1\\x82\\xd0\\xb0\\xd0\\xba\\xd0\\xbe\\xd0\\xb3\\xd0\\xbe \\xd1\\x84\\xd0\\xb0\\xd0\\xb9\\xd0\\xbb\\xd0\\xb0 \\xd0\\xb8\\xd0\\xbb\\xd0\\xb8 \\xd0\\xba\\xd0\\xb0\\xd1\\x82\\xd0\\xb0\\xd0\\xbb\\xd0\\xbe\\xd0\\xb3\\xd0\\xb0'))"}
+2016-06-09 07:52:58,824 p=9120 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 07:52:58,825 p=9120 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 07:52:58,825 p=9120 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:52:58,825 p=9120 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-09 07:53:18,934 p=9395 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:53:18,972 p=9395 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:53:19,696 p=9395 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:53:19,699 p=9395 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 07:53:20,113 p=9395 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "ConnectionError: ('Connection aborted.', error(2, '\\xd0\\x9d\\xd0\\xb5\\xd1\\x82 \\xd1\\x82\\xd0\\xb0\\xd0\\xba\\xd0\\xbe\\xd0\\xb3\\xd0\\xbe \\xd1\\x84\\xd0\\xb0\\xd0\\xb9\\xd0\\xbb\\xd0\\xb0 \\xd0\\xb8\\xd0\\xbb\\xd0\\xb8 \\xd0\\xba\\xd0\\xb0\\xd1\\x82\\xd0\\xb0\\xd0\\xbb\\xd0\\xbe\\xd0\\xb3\\xd0\\xb0'))"}
+2016-06-09 07:53:20,114 p=9395 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 07:53:20,114 p=9395 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 07:53:20,114 p=9395 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:53:20,114 p=9395 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-09 07:53:35,819 p=9651 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:53:35,857 p=9651 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:53:36,331 p=9651 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:53:36,334 p=9651 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 07:53:36,748 p=9651 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "ConnectionError: ('Connection aborted.', error(2, '\\xd0\\x9d\\xd0\\xb5\\xd1\\x82 \\xd1\\x82\\xd0\\xb0\\xd0\\xba\\xd0\\xbe\\xd0\\xb3\\xd0\\xbe \\xd1\\x84\\xd0\\xb0\\xd0\\xb9\\xd0\\xbb\\xd0\\xb0 \\xd0\\xb8\\xd0\\xbb\\xd0\\xb8 \\xd0\\xba\\xd0\\xb0\\xd1\\x82\\xd0\\xb0\\xd0\\xbb\\xd0\\xbe\\xd0\\xb3\\xd0\\xb0'))"}
+2016-06-09 07:53:36,748 p=9651 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 07:53:36,749 p=9651 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 07:53:36,749 p=9651 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:53:36,749 p=9651 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-09 07:57:40,291 p=10077 u=ec2-user |  ERROR! the playbook: playbooks/springxd-images. could not be found
+2016-06-09 07:57:43,049 p=10082 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:57:43,086 p=10082 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:57:43,849 p=10082 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:57:43,852 p=10082 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 07:57:44,268 p=10082 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "ConnectionError: ('Connection aborted.', error(13, '\\xd0\\x9e\\xd1\\x82\\xd0\\xba\\xd0\\xb0\\xd0\\xb7\\xd0\\xb0\\xd0\\xbd\\xd0\\xbe \\xd0\\xb2 \\xd0\\xb4\\xd0\\xbe\\xd1\\x81\\xd1\\x82\\xd1\\x83\\xd0\\xbf\\xd0\\xb5'))"}
+2016-06-09 07:57:44,269 p=10082 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 07:57:44,269 p=10082 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 07:57:44,269 p=10082 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:57:44,269 p=10082 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-09 07:58:23,314 p=10343 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 07:58:23,351 p=10343 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 07:58:24,082 p=10343 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 07:58:24,085 p=10343 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 07:58:24,518 p=10343 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": false, "failed": true, "msg": "Docker API error: client is newer than server (client API version: 1.22, server API version: 1.19)"}
+2016-06-09 07:58:24,519 p=10343 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 07:58:24,520 p=10343 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 07:58:24,520 p=10343 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 07:58:24,520 p=10343 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-09 08:01:30,152 p=10754 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 08:01:30,190 p=10754 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 08:01:31,198 p=10754 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 08:01:31,201 p=10754 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 08:01:33,413 p=10754 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": true, "cmd": ["docker", "pull", "kavabungo/docker-springxd-base"], "delta": "0:00:01.911330", "end": "2016-06-09 08:01:33.397930", "failed": true, "rc": 1, "start": "2016-06-09 08:01:31.486600", "stderr": "Repository not found", "stdout": "Pulling repository kavabungo/docker-springxd-base", "stdout_lines": ["Pulling repository kavabungo/docker-springxd-base"], "warnings": []}
+2016-06-09 08:01:33,414 p=10754 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 08:01:33,414 p=10754 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 08:01:33,414 p=10754 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 08:01:33,415 p=10754 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+2016-06-09 08:25:49,771 p=11143 u=ec2-user |  ERROR! the playbook: playbooks/springxd-images. could not be found
+2016-06-09 08:25:52,749 p=11148 u=ec2-user |  PLAY [test] ********************************************************************
+2016-06-09 08:25:52,786 p=11148 u=ec2-user |  TASK [setup] *******************************************************************
+2016-06-09 08:25:53,785 p=11148 u=ec2-user |  ok: [127.0.0.1]
+2016-06-09 08:25:53,788 p=11148 u=ec2-user |  TASK [pull images] *************************************************************
+2016-06-09 08:31:47,524 p=11148 u=ec2-user |  fatal: [127.0.0.1]: FAILED! => {"changed": true, "cmd": ["docker", "pull", "kavabungo/docker-springxd-base"], "delta": "0:05:53.432932", "end": "2016-06-09 08:31:47.503329", "failed": true, "rc": 1, "start": "2016-06-09 08:25:54.070397", "stderr": "Repository not found", "stdout": "latest: Pulling from kavabungo/docker-springxd-base\n9649323c2a0b: Pulling fs layer\n766cff8f8dd6: Pulling fs layer\nb39ba1e8f276: Pulling fs layer\n2ce6c0672c95: Pulling fs layer\nabf352b15087: Pulling fs layer\n96365d1691ca: Pulling fs layer\n26a48e0ff40a: Pulling fs layer\nfe662b301db9: Pulling fs layer\ncbd2ee893a51: Pulling fs layer\n518020f99def: Pulling fs layer\n87feb44f09d2: Pulling fs layer\n5da834598da7: Pulling fs layer\nd7e65ba50727: Pulling fs layer\na1d75cc449f6: Pulling fs layer\nb9e258f0516e: Pulling fs layer\n93ef03d2646d: Pulling fs layer\n462040d89ec3: Pulling fs layer\na2295636c7aa: Already exists\n3035387b9e83: Already exists\nc394bf6e2527: Already exists\nbbdb7053f3db: Already exists\n4bf28a26abc4: Already exists\n518020f99def: Verifying Checksum\n518020f99def: Download complete\n87feb44f09d2: Verifying Checksum\n87feb44f09d2: Download complete\nb39ba1e8f276: Verifying Checksum\nb39ba1e8f276: Download complete\n766cff8f8dd6: Verifying Checksum\n766cff8f8dd6: Download complete\n2ce6c0672c95: Verifying Checksum\n2ce6c0672c95: Download complete\ncbd2ee893a51: Verifying Checksum\ncbd2ee893a51: Download complete\n9649323c2a0b: Verifying Checksum\n9649323c2a0b: Download complete\n462040d89ec3: Verifying Checksum\n462040d89ec3: Download complete\nb9e258f0516e: Verifying Checksum\nb9e258f0516e: Download complete\n5da834598da7: Verifying Checksum\n5da834598da7: Download complete\n26a48e0ff40a: Verifying Checksum\n26a48e0ff40a: Download complete\nabf352b15087: Verifying Checksum\nabf352b15087: Download complete\n96365d1691ca: Verifying Checksum\n96365d1691ca: Download complete\nd7e65ba50727: Verifying Checksum\nd7e65ba50727: Download complete\n9649323c2a0b: Pull complete\n93ef03d2646d: Verifying Checksum\n93ef03d2646d: Download complete\n766cff8f8dd6: Pull complete\nb39ba1e8f276: Pull complete\n2ce6c0672c95: Pull complete\nabf352b15087: Pull complete\n96365d1691ca: Pull complete\n26a48e0ff40a: Pull complete\nfe662b301db9: Verifying Checksum\nfe662b301db9: Download complete\nfe662b301db9: Pull complete\ncbd2ee893a51: Pull complete\n518020f99def: Pull complete\n87feb44f09d2: Pull complete\n5da834598da7: Pull complete\nd7e65ba50727: Pull complete\na1d75cc449f6: Verifying Checksum\na1d75cc449f6: Download complete\nPulling repository kavabungo/docker-springxd-base", "stdout_lines": ["latest: Pulling from kavabungo/docker-springxd-base", "9649323c2a0b: Pulling fs layer", "766cff8f8dd6: Pulling fs layer", "b39ba1e8f276: Pulling fs layer", "2ce6c0672c95: Pulling fs layer", "abf352b15087: Pulling fs layer", "96365d1691ca: Pulling fs layer", "26a48e0ff40a: Pulling fs layer", "fe662b301db9: Pulling fs layer", "cbd2ee893a51: Pulling fs layer", "518020f99def: Pulling fs layer", "87feb44f09d2: Pulling fs layer", "5da834598da7: Pulling fs layer", "d7e65ba50727: Pulling fs layer", "a1d75cc449f6: Pulling fs layer", "b9e258f0516e: Pulling fs layer", "93ef03d2646d: Pulling fs layer", "462040d89ec3: Pulling fs layer", "a2295636c7aa: Already exists", "3035387b9e83: Already exists", "c394bf6e2527: Already exists", "bbdb7053f3db: Already exists", "4bf28a26abc4: Already exists", "518020f99def: Verifying Checksum", "518020f99def: Download complete", "87feb44f09d2: Verifying Checksum", "87feb44f09d2: Download complete", "b39ba1e8f276: Verifying Checksum", "b39ba1e8f276: Download complete", "766cff8f8dd6: Verifying Checksum", "766cff8f8dd6: Download complete", "2ce6c0672c95: Verifying Checksum", "2ce6c0672c95: Download complete", "cbd2ee893a51: Verifying Checksum", "cbd2ee893a51: Download complete", "9649323c2a0b: Verifying Checksum", "9649323c2a0b: Download complete", "462040d89ec3: Verifying Checksum", "462040d89ec3: Download complete", "b9e258f0516e: Verifying Checksum", "b9e258f0516e: Download complete", "5da834598da7: Verifying Checksum", "5da834598da7: Download complete", "26a48e0ff40a: Verifying Checksum", "26a48e0ff40a: Download complete", "abf352b15087: Verifying Checksum", "abf352b15087: Download complete", "96365d1691ca: Verifying Checksum", "96365d1691ca: Download complete", "d7e65ba50727: Verifying Checksum", "d7e65ba50727: Download complete", "9649323c2a0b: Pull complete", "93ef03d2646d: Verifying Checksum", "93ef03d2646d: Download complete", "766cff8f8dd6: Pull complete", "b39ba1e8f276: Pull complete", "2ce6c0672c95: Pull complete", "abf352b15087: Pull complete", "96365d1691ca: Pull complete", "26a48e0ff40a: Pull complete", "fe662b301db9: Verifying Checksum", "fe662b301db9: Download complete", "fe662b301db9: Pull complete", "cbd2ee893a51: Pull complete", "518020f99def: Pull complete", "87feb44f09d2: Pull complete", "5da834598da7: Pull complete", "d7e65ba50727: Pull complete", "a1d75cc449f6: Verifying Checksum", "a1d75cc449f6: Download complete", "Pulling repository kavabungo/docker-springxd-base"], "warnings": []}
+2016-06-09 08:31:47,525 p=11148 u=ec2-user |  NO MORE HOSTS LEFT *************************************************************
+2016-06-09 08:31:47,526 p=11148 u=ec2-user |  	to retry, use: --limit @playbooks/springxd-images.retry
+
+2016-06-09 08:31:47,526 p=11148 u=ec2-user |  PLAY RECAP *********************************************************************
+2016-06-09 08:31:47,526 p=11148 u=ec2-user |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
